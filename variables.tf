@@ -43,6 +43,7 @@ variable "diagnostic_setting_enabled_log_categories" {
 
 variable "log_analytics_workspace_id" {
   description = "The ID of the Log Analytics workspace to send diagnostics to."
+  type        = string
 }
 
 variable "log_analytics_destination_type" {
