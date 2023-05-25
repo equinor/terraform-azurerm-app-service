@@ -17,7 +17,7 @@ resource "azurerm_monitor_autoscale_setting" "this" {
   target_resource_id  = azurerm_service_plan.this.id
   enabled             = var.autoscale_enabled
 
-  dynamic "autoscale_profile" {
+  dynamic "profile" {
     for_each = each.value["profile"]
 
     content {
