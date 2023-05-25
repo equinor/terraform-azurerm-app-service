@@ -37,7 +37,7 @@ variable "tags" {
   default     = {}
 }
 
-variable "profile" {
+variable "autoscale_profile" {
   description = "A map of profiles to create for the autoscaling settings"
 
   type = map(object({

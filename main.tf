@@ -9,7 +9,7 @@ resource "azurerm_service_plan" "this" {
 }
 
 resource "azurerm_monitor_autoscale_setting" "this" {
-  for_each = var.profile
+  for_each = var.autoscale_profile
 
   name                = each.value["name"]
   resource_group_name = azurerm_resource_group.example.name
