@@ -24,7 +24,7 @@ module "app_service" {
       name = "autoscale_setting0"
 
       profile = {
-        profile_name = "profile0"
+        profile_name = "standard"
 
         capacity = {
           capacity_default = 1
