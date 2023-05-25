@@ -55,3 +55,23 @@ variable "tags" {
   type        = map(string)
   default     = {}
 }
+
+variable "profile" {
+  description = "A map of profiles to create for the autoscaling settings"
+
+  type = map(object({
+    name = string
+
+    profile = object({
+      profile_name = string
+
+      capacity = object({
+        capacity_default = number
+        capacity_minimum = number
+        capacity_maximum = number
+      })
+    })
+  }))
+
+  default {}
+}

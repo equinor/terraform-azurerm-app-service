@@ -9,18 +9,25 @@ resource "azurerm_service_plan" "this" {
 }
 
 resource "azurerm_monitor_autoscale_setting" "this" {
-  name                = "app-service-autoscaling"
+  for_each = var.profile
+
+  name                = each.value["name"]
   resource_group_name = azurerm_resource_group.example.name
   location            = var.location
   target_resource_id  = azurerm_service_plan.this.id
   enabled             = var.autoscale_enabled
 
-  profile {
-    name = "app-autoscaling-profile"
-    capacity {
-      default = var.autoscale_profile_capacity_default
-      minimum = var.autoscale_profile_capacity_minimum
-      maximum = var.autoscale_profile_capacity_maximum
+  dynamic "profile" {
+    for_each = each.value["profile"]
+
+    content {
+      profile_name = profile.value["profile_name"]
+
+      capacity {
+        capacity_default = profile.value["capacity_default"]
+        capacity_minimum = profile.value["capacity_minimum"]
+        capacity_maximum = profile.value["capacity_maximum"]
+      }
     }
   }
 }
