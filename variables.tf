@@ -41,9 +41,7 @@ variable "autoscale_setting" {
   description = "A map of profiles to create for the autoscaling settings"
 
   type = map(object({
-    name               = string
-    target_resource_id = string
-    enabled            = optional(string)
+    name = string
 
     profile = object({
       profile_name = string
@@ -55,6 +53,4 @@ variable "autoscale_setting" {
       })
     })
   }))
-
-  default {}
 }

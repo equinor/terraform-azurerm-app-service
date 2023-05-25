@@ -12,7 +12,7 @@ resource "azurerm_monitor_autoscale_setting" "this" {
   for_each = var.autoscale_setting
 
   name                = each.value["name"]
-  resource_group_name = azurerm_resource_group.example.name
+  resource_group_name = var.resource_group_name
   location            = var.location
   target_resource_id  = azurerm_service_plan.this.id
   enabled             = var.autoscale_enabled
