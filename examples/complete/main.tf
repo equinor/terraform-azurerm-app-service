@@ -18,20 +18,15 @@ module "app_service" {
   plan_name           = "plan-${random_id.example.hex}"
   resource_group_name = azurerm_resource_group.example.name
   location            = azurerm_resource_group.example.location
+  autoscale_name      = "autoscale-${random_id.example.hex}"
 
-  autoscale_setting = {
-    "this" = {
-      name = "autoscale_setting0"
+  profile = [{
+    name = "autoscale_setting1"
 
-      profile = {
-        profile_name = "standard"
-
-        capacity = {
-          capacity_default = 1
-          capacity_minimum = 1
-          capacity_maximum = 10
-        }
-      }
-    }
-  }
+    capacity = [{
+      default = 1
+      minimum = 1
+      maximum = 10
+    }]
+  }]
 }

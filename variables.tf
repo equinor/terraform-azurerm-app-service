@@ -25,6 +25,11 @@ variable "sku_name" {
   default     = "B1"
 }
 
+variable "autoscale_name" {
+  description = "The name of the autoscale setting."
+  type        = string
+}
+
 variable "autoscale_enabled" {
   description = "Specifies whether automatic scaling is enabled for the target resource."
   type        = bool
@@ -37,20 +42,17 @@ variable "tags" {
   default     = {}
 }
 
-variable "autoscale_setting" {
+variable "profile" {
   description = "A map of profiles to create for the autoscaling settings"
-
   type = map(object({
     name = string
 
-    profile = object({
-      profile_name = string
-
-      capacity = object({
-        capacity_default = number
-        capacity_minimum = number
-        capacity_maximum = number
-      })
+    capacity = object({
+      default = number
+      minimum = number
+      maximum = number
     })
   }))
+
+  default = {}
 }
