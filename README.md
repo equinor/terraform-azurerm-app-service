@@ -1,3 +1,7 @@
+> **Note**
+> This module creates a single resource `azurerm_app_service`, without providing any additional functionality.
+> As a result, it has been archived.
+
 # Azure App Service plan Terraform module
 
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
