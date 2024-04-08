@@ -40,7 +40,7 @@ resource "azurerm_service_plan" "this" {
 resource "azurerm_monitor_metric_alert" "this" {
   for_each = local.metric_alerts
 
-  name                = each.value.name
+  name                = "${each.value.name} - ${azurerm_service_plan.this.name}"
   resource_group_name = var.resource_group_name
   scopes              = [azurerm_service_plan.this.id]
   description         = each.value.description
