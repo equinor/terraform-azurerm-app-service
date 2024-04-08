@@ -7,8 +7,8 @@ locals {
       metric_name = "CpuPercentage"
       aggregation = "Average"
       operator    = "GreaterThan"
-      threshold   = 90
-      frequency   = "PT1M"
+      threshold   = var.cpu_percentage_metric_alert_threshold
+      frequency   = var.cpu_percentage_metric_alert_frequency
       window_size = "PT5M"
       severity    = 3
     }
@@ -19,8 +19,8 @@ locals {
       metric_name = "MemoryPercentage"
       aggregation = "Average"
       operator    = "GreaterThan"
-      threshold   = 90
-      frequency   = "PT1M"
+      threshold   = var.memory_percentage_metric_alert_threshold
+      frequency   = var.memory_percentage_metric_alert_frequency
       window_size = "PT5M"
       severity    = 3
     }
