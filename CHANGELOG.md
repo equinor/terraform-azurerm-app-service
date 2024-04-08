@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.0.0](https://github.com/equinor/terraform-azurerm-app-service/compare/v1.0.0...v2.0.0) (2024-04-08)
+
+
+### ⚠ BREAKING CHANGES
+
+* add required variable `action_group_id`.
+
+### Features
+
+* add CPU and memory usage alerts ([#10](https://github.com/equinor/terraform-azurerm-app-service/issues/10)) ([3ca02a4](https://github.com/equinor/terraform-azurerm-app-service/commit/3ca02a459d70ba4c879dc1b7f75485dc8815325b))
+
 ## 0.1.0 (2023-04-12)
 
 
