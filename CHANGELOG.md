@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.0](https://github.com/equinor/terraform-azurerm-app-service/compare/v2.0.0...v2.1.0) (2024-07-24)
+
+
+### Features
+
+* output OS type ([#16](https://github.com/equinor/terraform-azurerm-app-service/issues/16)) ([5ac3463](https://github.com/equinor/terraform-azurerm-app-service/commit/5ac34635a3d31de60fadce983353bfe92e9ce762))
+
 ## [2.0.0](https://github.com/equinor/terraform-azurerm-app-service/compare/v1.0.0...v2.0.0) (2024-04-08)
 
 
