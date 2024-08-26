@@ -10,7 +10,7 @@ Serves as a soft prerequisite for the [Azure Web App](https://registry.terraform
 
 ## Features
 
-- Send alerts to the given action group based on the following conditions:
+- Send the following alerts to the given action group:
   - Average CPU percentage past 5 minutes greater than 90%.
   - Average memory percentage past 5 minutes greater than 90%.
 
