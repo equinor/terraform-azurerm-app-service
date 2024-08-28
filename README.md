@@ -6,6 +6,14 @@
 
 Terraform module which creates Azure App Service resources.
 
+Serves as a soft prerequisite for the [Azure Web App](https://registry.terraform.io/modules/equinor/web-app/azurerm/latest) and [Azure Function App](https://registry.terraform.io/modules/equinor/function-app/azurerm/latest) Terraform modules.
+
+## Features
+
+- Alerts sent to the given action group:
+  - Average CPU percentage past 5 minutes greater than 90%.
+  - Average memory percentage past 5 minutes greater than 90%.
+
 ## Development
 
 1. Clone this repository:
