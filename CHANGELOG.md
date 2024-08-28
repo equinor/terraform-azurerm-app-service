@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.1](https://github.com/equinor/terraform-azurerm-app-service/compare/v2.1.0...v2.1.1) (2024-08-28)
+
+
+### Miscellaneous Chores
+
+* update variable descriptions and add features list ([#18](https://github.com/equinor/terraform-azurerm-app-service/issues/18)) ([18cfd71](https://github.com/equinor/terraform-azurerm-app-service/commit/18cfd71279c8b5816d669ca31c08fcb17387dab1))
+
 ## [2.1.0](https://github.com/equinor/terraform-azurerm-app-service/compare/v2.0.0...v2.1.0) (2024-07-24)
 
 
