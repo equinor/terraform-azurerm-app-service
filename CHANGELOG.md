@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.2](https://github.com/equinor/terraform-azurerm-app-service/compare/v2.1.1...v2.1.2) (2025-04-25)
+
+
+### Documentation
+
+* update README ([c9430ae](https://github.com/equinor/terraform-azurerm-app-service/commit/c9430ae022c9f72758fea716502af8a14e8bf49a))
+
 ## [2.1.1](https://github.com/equinor/terraform-azurerm-app-service/compare/v2.1.0...v2.1.1) (2024-08-28)
 
 
