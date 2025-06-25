@@ -36,6 +36,15 @@ module "app_service" {
   plan_name           = "example-plan"
   resource_group_name = azurerm_resource_group.example.name
   location            = azurerm_resource_group.example.location
+}
+
+module "app_service_alerts" {
+  source = "equinor/app-service/azurerm//modules/alerts"
+  version = "~> 2.1"
+
+  resource_group_name = azurerm_resource_group.example.name
+  plan_name           = module.app_service.plan_name
+  plan_id             = module.app_service.plan_id
   action_group_id     = azurerm_monitor_action_group.example.id
 }
 
@@ -78,6 +87,15 @@ module "app_service" {
   resource_group_name = azurerm_resource_group.example.name
   location            = azurerm_resource_group.example.location
   os_type             = "Windows"
+}
+
+module "app_service_alerts" {
+  source = "equinor/app-service/azurerm//modules/alerts"
+  version = "~> 2.1"
+
+  resource_group_name = azurerm_resource_group.example.name
+  plan_name           = module.app_service.plan_name
+  plan_id             = module.app_service.plan_id
   action_group_id     = azurerm_monitor_action_group.example.id
 }
 

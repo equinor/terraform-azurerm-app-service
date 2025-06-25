@@ -26,5 +26,15 @@ module "app_service" {
   plan_name           = "plan-${random_id.example.hex}"
   resource_group_name = var.resource_group_name
   location            = var.location
-  action_group_id     = azurerm_monitor_action_group.this.id
+}
+
+module "app_service_alerts" {
+  # source  = "equinor/app-service/azurerm//modules/alerts"
+  source  = "../../modules/alerts"
+  version = "~> 2.1"
+
+  resource_group_name = azurerm_resource_group.example.name
+  plan_name           = module.app_service.plan_name
+  plan_id             = module.app_service.plan_id
+  action_group_id     = azurerm_monitor_action_group.example.id
 }

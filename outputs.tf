@@ -2,6 +2,14 @@ output "plan_id" {
   description = "The ID of this App Service plan."
   value       = azurerm_service_plan.this.id
 }
+output "plan_name" {
+  description = "The name of this App Service plan."
+  value       = azurerm_service_plan.this.name
+}
+output "plan_id" {
+  description = "The ID of this App Service plan."
+  value       = azurerm_service_plan.this.id
+}
 
 output "kind" {
   description = "The kind of this App Service plan."

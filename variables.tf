@@ -35,12 +35,6 @@ variable "sku_name" {
   nullable    = false
 }
 
-variable "action_group_id" {
-  description = "The ID of the action group to send alerts to."
-  type        = string
-  nullable    = false
-}
-
 variable "tags" {
   description = "A map of tags to assign to the resources."
   type        = map(string)
