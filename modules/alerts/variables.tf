@@ -4,6 +4,12 @@ variable "resource_group_name" {
   nullable    = false
 }
 
+variable "service_plans" {
+  description = "A map of App Service plans to create alert rules for. The key is the plan name and the value is the plan ID."
+  type        = map(string)
+  nullable    = false
+}
+
 variable "plan_name" {
   description = "The name of the App Service plan to associate with the alerts."
   type        = string
