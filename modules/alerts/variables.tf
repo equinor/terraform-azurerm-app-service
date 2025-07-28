@@ -10,12 +10,6 @@ variable "service_plans" {
   nullable    = false
 }
 
-variable "plan_name" {
-  description = "The name of the App Service plan to associate with the alerts."
-  type        = string
-  nullable    = false
-}
-
 variable "plan_id" {
   description = "The id of the App Service plan to associate with the alerts."
   type        = string

@@ -1,5 +1,9 @@
+locals {
+  plan = provider::azurerm::parse_resource_id(var.plan_id, "Microsoft.Web/serverfarms")
+}
+
 resource "azurerm_monitor_metric_alert" "cpu_precentage" {
-  name                = coalesce(var.cpu_precentage_rule_name, "${var.plan_name} (CPU Percentage)")
+  name                = coalesce(var.cpu_precentage_rule_name, "${local.plan.name} (CPU Percentage)")
   resource_group_name = var.resource_group_name
   scopes              = [var.plan_id]
   description         = "The average CPU used across all instances of the plan."
@@ -24,7 +28,7 @@ resource "azurerm_monitor_metric_alert" "cpu_precentage" {
 }
 
 resource "azurerm_monitor_metric_alert" "memory_percentage" {
-  name                = coalesce(var.memory_precentage_rule_name, "${var.plan_name} (CPU Memory)")
+  name                = coalesce(var.memory_precentage_rule_name, "${local.plan.name} (CPU Memory)")
   resource_group_name = var.resource_group_name
   scopes              = [var.plan_id]
   description         = "The average memory used across all instances of the plan."
