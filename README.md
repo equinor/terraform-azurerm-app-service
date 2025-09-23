@@ -1,5 +1,12 @@
 # Terraform module for Azure App Service
 
+[![GitHub Release](https://img.shields.io/github/v/release/equinor/terraform-azurerm-app-service)](https://github.com/equinor/terraform-azurerm-app-service/releases/latest)
+[![Terraform Module Downloads](https://img.shields.io/terraform/module/dt/equinor/app-service/azurerm)](https://registry.terraform.io/modules/equinor/app-service/azurerm/latest)
+[![GitHub contributors](https://img.shields.io/github/contributors/equinor/terraform-azurerm-app-service)](https://github.com/equinor/terraform-azurerm-app-service/graphs/contributors)
+[![GitHub Issues](https://img.shields.io/github/issues/equinor/terraform-azurerm-app-service)](https://github.com/equinor/terraform-azurerm-app-service/issues)
+[![GitHub Pull requests](https://img.shields.io/github/issues-pr/equinor/terraform-azurerm-app-service)](https://github.com/equinor/terraform-azurerm-app-service/pulls)
+[![GitHub License](https://img.shields.io/github/license/equinor/terraform-azurerm-app-service)](https://github.com/equinor/terraform-azurerm-app-service/blob/main/LICENSE)
+
 Terraform module which creates Azure App Service resources.
 
 Serves as a soft prerequisite for the [Azure Web App](https://registry.terraform.io/modules/equinor/web-app/azurerm/latest) and [Azure Function App](https://registry.terraform.io/modules/equinor/function-app/azurerm/latest) modules.
